@@ -1,4 +1,5 @@
-import { Container, Text, VStack, IconButton, Input, Textarea, Button, Box, Heading, SimpleGrid } from "@chakra-ui/react";
+import { Container, Text, VStack, Input, Textarea, Button, Box, Heading, SimpleGrid } from "@chakra-ui/react";
+import { FaPlus, FaTrash } from "react-icons/fa";
 import { useState } from "react";
 import { FaPlus, FaTrash } from "react-icons/fa";
 
