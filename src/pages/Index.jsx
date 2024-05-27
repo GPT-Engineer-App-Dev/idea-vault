@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Box, Button, Container, Flex, Grid, Heading, IconButton, Input, Textarea, VStack } from "@chakra-ui/react";
-import { AddIcon, DeleteIcon, EditIcon } from "@chakra-ui/icons";
+import { FaPlus, FaTrash, FaEdit } from "react-icons/fa";
 
 const Index = () => {
   const [notes, setNotes] = useState([]);
@@ -42,7 +42,7 @@ const Index = () => {
     <Container maxW="container.xl" p={4}>
       <Flex justifyContent="space-between" alignItems="center" mb={4}>
         <Heading as="h1" size="lg">Note Taking App</Heading>
-        <Button leftIcon={<AddIcon />} colorScheme="teal" onClick={handleAddNote}>
+        <Button leftIcon={<FaPlus />} colorScheme="teal" onClick={handleAddNote}>
           Add Note
         </Button>
       </Flex>
@@ -73,8 +73,8 @@ const Index = () => {
             <Heading as="h3" size="md" mb={2}>{note.title}</Heading>
             <Box mb={2}>{note.content}</Box>
             <Flex justifyContent="space-between">
-              <IconButton icon={<EditIcon />} onClick={() => handleEditNote(note.id)} />
-              <IconButton icon={<DeleteIcon />} onClick={() => handleDeleteNote(note.id)} />
+              <IconButton icon={<FaEdit />} onClick={() => handleEditNote(note.id)} />
+              <IconButton icon={<FaTrash />} onClick={() => handleDeleteNote(note.id)} />
             </Flex>
           </Box>
         ))}
